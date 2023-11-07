@@ -39,10 +39,10 @@ $(document).ready(function () {
 
   function searchPlaces () {
     $.post({
-      URL: 'http://0.0.0.0:5001/api/v1/places_search/',
-      data: JSON.stringify({ amenities: Object.values(amenities) }),
+      url: 'http://0.0.0.0:5001/api/v1/places_search/',
+      data: JSON.stringify({ }),
       dataType: 'json',
-      Headers: { 'Content-Type': 'application/json' },
+      contentType: 'application/json',
       success: function (data) {
         $('.places').empty();
         for (const place of data) {
