@@ -40,7 +40,7 @@ $(document).ready(function () {
   function searchPlaces () {
     $.post({
       url: 'http://0.0.0.0:5001/api/v1/places_search/',
-      data: JSON.stringify({amenities: Object.values(amenities)}),
+      data: JSON.stringify({ amenities: Object.values(amenities) }),
       dataType: 'json',
       contentType: 'application/json',
       success: function (data) {
